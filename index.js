@@ -1,10 +1,11 @@
 
 // sets current day on site
-var currentUserDay = moment().format("MMM Do, YYYY");
+let currentUserDay = moment().format("MMM Do, YYYY");
 $('#currentDay').text(currentUserDay);
 
 $(document).ready(function() {
 
+// once page loads the save button will be ready to use and save to local storage whatever user inputs
   $('.saveBtn').on('click', function() {
     let scheduleText = $(this).siblings('.description').val();
     let scheduleTime = $(this).parent().attr('id');
@@ -12,6 +13,7 @@ $(document).ready(function() {
     localStorage.setItem(scheduleTime, scheduleText);
   })
 
+// on page start the user's time will be used to determine what color the time blocks are highlighted with
   function indicateTimeColor() {
   let currentTime = moment().hour();
   
@@ -19,21 +21,22 @@ $(document).ready(function() {
     let timeColorChange = parseInt($(this).attr('id').split('hour'));
 
     if (timeColorChange < currentTime){
-      $(this).removeClass('future')
-      $(this).removeClass('present')
       $(this).addClass('past')
+      // $(this).removeClass('present')
+      // $(this).removeClass('future')
     }
 
-    if (timeColorChange === currentTime){
+    else if (timeColorChange === currentTime){
       $(this).removeClass('past')
-      $(this).removeClass('future')
       $(this).addClass('present')
+      // $(this).removeClass('future')
     }
 
     else {
       $(this).removeClass('present')
-      $(this).removeClass('past')
-      $(this).addClass('future') }
+      // $(this).removeClass('future')
+      $(this).addClass('future') 
+    }
     }
   )}; 
 
