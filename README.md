@@ -31,4 +31,4 @@ Some resources used include:
 
 Here is a link to my deployed page that will display a daily planner with the ability to save your input and display a color depending on the time. Gray for past, pastel purple for present, and pastel yellow for future.
 
-[Daily Scheduler Link]()
+[Daily Scheduler Link](https://jmonrom.github.io/daily-planner/)
