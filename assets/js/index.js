@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   $('.time-block').each(function() {
     let timeColorChange = parseInt($(this).attr("id").split('hour'));
-    console.log(timeColorChange)
+    // console.log(timeColorChange)
     if (timeColorChange < currentTime) {
       $(this).addClass("past");
     } else if (timeColorChange === currentTime) {

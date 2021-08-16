@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+h2 {
+  font-size: 14px;
+}
+
 textarea {
   background: transparent;
   border: none;
@@ -72,4 +76,11 @@ textarea {
 
 button:focus {
   outline: none;
+}
+
+footer {
+  padding: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  font-size: 10px;
 }
